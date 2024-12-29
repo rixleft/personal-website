@@ -1,0 +1,11 @@
+@custom-media --phone (width < 500PX);
+@custom-media --tablet (width >= 500PX) and (width <= 1024PX);
+@custom-media --desktop (width > 1024PX);
+@custom-media --portrait (height <= width);
+@custom-media --landscape (height > width);
+@custom-media --portrait-phone (--phone and --portrait);
+@custom-media --landscape-phone (--phone and --landscape);
+@custom-media --portrait-tablet (--tablet and--portrait);
+@custom-media --landscape-tablet (--tablet and --landscap);
+@custom-media --portrait-desktop (--desktop and --portrait);
+@custom-media --landscape-desktop (--desktop and --landscape);
