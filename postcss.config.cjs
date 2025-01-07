@@ -13,7 +13,8 @@ module.exports = {
 		'postcss-pxtorem': {
 			rootValue: 37.5, // 设计稿尺寸375px
 			propList: ['*'],
-			mediaQuery: true
+			mediaQuery: true,
+			exclude: [/\/src\/styles\/custom-media\.css$/]
 		}
 	}
 }
