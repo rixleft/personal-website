@@ -1,18 +1,20 @@
 <template>
-	<div>
+	<config-provider :theme="theme" :theme-vars-scope="'global'">
 		<router-view v-slot="{ Component }">
 			<keep-alive :include="cacheList">
 				<component :is="Component"></component>
 			</keep-alive>
 		</router-view>
-	</div>
+	</config-provider>
 </template>
 
 <script setup lang="ts">
 defineOptions({
 	name: 'rix-app'
 })
-import { useCacheStore } from '@/stores/cacheStore'
-const { cacheList } = useCacheStore()
+import { storeToRefs } from 'pinia'
+import { useConfigStore } from '@/stores/modules/configStore'
+import ConfigProvider from '@/components/config-provider/index.tsx'
+const { cacheList, theme } = storeToRefs(useConfigStore())
 </script>
 <style scoped></style>

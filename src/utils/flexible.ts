@@ -1,7 +1,7 @@
-import { TABLET_MIN_WIDTH, TABLET_MAX_WIDTH } from '@/constants/base-constant.js'
+import { DEVICE_CONFIG } from '@/config/index'
 ;(function flexible(window, document) {
-	let docEl = document.documentElement
-	let dpr = window.devicePixelRatio || 1
+	const docEl = document.documentElement
+	const dpr = window.devicePixelRatio || 1
 
 	// adjust body font size
 	function setBodyFontSize() {
@@ -15,16 +15,12 @@ import { TABLET_MIN_WIDTH, TABLET_MAX_WIDTH } from '@/constants/base-constant.js
 
 	// set 1rem = viewWidth / 10
 	function setRemUnit() {
-		if (docEl.clientWidth > TABLET_MAX_WIDTH) {
-			docEl.style.fontSize = '64px'
-			return
+		for (const device in DEVICE_CONFIG) {
+			if (docEl.clientWidth < DEVICE_CONFIG[device as Device.DeviceType].thresholdWidth) {
+				docEl.style.fontSize = DEVICE_CONFIG[device as Device.DeviceType].fontSize === 'auto' ? docEl.clientWidth / 10 + 'px' : DEVICE_CONFIG[device as Device.DeviceType].fontSize
+				break
+			}
 		}
-		if (docEl.clientWidth > TABLET_MIN_WIDTH) {
-			docEl.style.fontSize = '50px'
-			return
-		}
-		let rem = docEl.clientWidth / 10
-		docEl.style.fontSize = rem + 'px'
 	}
 
 	setRemUnit()
@@ -39,8 +35,8 @@ import { TABLET_MIN_WIDTH, TABLET_MAX_WIDTH } from '@/constants/base-constant.js
 
 	// detect 0.5px supports
 	if (dpr >= 2) {
-		let fakeBody = document.createElement('body')
-		let testElement = document.createElement('div')
+		const fakeBody = document.createElement('body')
+		const testElement = document.createElement('div')
 		testElement.style.border = '.5px solid transparent'
 		fakeBody.appendChild(testElement)
 		docEl.appendChild(fakeBody)

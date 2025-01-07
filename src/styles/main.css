@@ -3,3 +3,49 @@
 	padding: 0;
 	margin: 0;
 }
+:root {
+	--rix-light-primary-100: #d4eaf7;
+	--rix-light-primary-200: #b6ccd8;
+	--rix-light-primary-300: #3b3c3d;
+	--rix-light-accent-100: #71c4ef;
+	--rix-light-accent-200: #00668c;
+	--rix-light-text-100: #1d1c1c;
+	--rix-light-text-200: #313d44;
+	--rix-light-bg-100: #fffefb;
+	--rix-light-bg-200: #f5f4f1;
+	--rix-light-bg-300: #cccbc8;
+	--rix-dark-primary-100: #1f3a5f;
+	--rix-dark-primary-200: #4d648d;
+	--rix-dark-primary-300: #acc2ef;
+	--rix-dark-accent-100: #3d5a80;
+	--rix-dark-accent-200: #cee8ff;
+	--rix-dark-text-100: #ffffff;
+	--rix-dark-text-200: #e0e0e0;
+	--rix-dark-bg-100: #0f1c2e;
+	--rix-dark-bg-200: #1f2b3e;
+	--rix-dark-bg-300: #374357;
+}
+.rix-theme-dark {
+	--rix-primary-100: var(--rix-dark-primary-100);
+	--rix-primary-200: var(--rix-dark-primary-200);
+	--rix-primary-300: var(--rix-dark-primary-300);
+	--rix-accent-100: var(--rix-dark-accent-100);
+	--rix-accent-200: var(--rix-dark-accent-200);
+	--rix-text-100: var(--rix-dark-text-100);
+	--rix-text-200: var(--rix-dark-text-200);
+	--rix-bg-100: var(--rix-dark-bg-100);
+	--rix-bg-200: var(--rix-dark-bg-200);
+	--rix-bg-300: var(--rix-dark-bg-300);
+}
+.rix-theme-light {
+	--rix-primary-100: var(--rix-light-primary-100);
+	--rix-primary-200: var(--rix-light-primary-200);
+	--rix-primary-300: var(--rix-light-primary-300);
+	--rix-accent-100: var(--rix-light-accent-100);
+	--rix-accent-200: var(--rix-light-accent-200);
+	--rix-text-100: var(--rix-light-text-100);
+	--rix-text-200: var(--rix-light-text-200);
+	--rix-bg-100: var(--rix-light-bg-100);
+	--rix-bg-200: var(--rix-light-bg-200);
+	--rix-bg-300: var(--rix-light-bg-300);
+}
