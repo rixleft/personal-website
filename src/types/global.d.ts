@@ -14,3 +14,7 @@ declare namespace ThemeProvider {
 	type ThemeVarsScope = 'local' | 'global'
 	type ThemeVars = PropType<Record<string, Numeric>>
 }
+
+declare namespace Layout {
+	type LayoutType = 'classic' | 'unique'
+}

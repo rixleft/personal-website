@@ -1,15 +1,3 @@
-<template>
-	<div class="rix-home" @click="changeTheme">点我切换主题</div>
-</template>
-
-<script setup lang="ts">
-defineOptions({
-	name: 'rix-home'
-})
-import { useConfigStore } from '@/stores/modules/configStore'
-const { changeTheme } = useConfigStore()
-</script>
-<style scoped lang="scss">
 @media (--phone) {
 	.rix-home {
 		width: 100vw;
@@ -39,4 +27,3 @@ const { changeTheme } = useConfigStore()
 		background-color: var(--rix-bg-300);
 	}
 }
-</style>
