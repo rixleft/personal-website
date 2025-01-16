@@ -14,7 +14,6 @@ defineOptions({
 })
 import { storeToRefs } from 'pinia'
 import { useConfigStore } from '@/stores/modules/configStore'
-import ConfigProvider from '@/components/config-provider/index.tsx'
+import ConfigProvider from '@/components/ConfigProvider'
 const { cacheList, theme } = storeToRefs(useConfigStore())
 </script>
-<style scoped></style>

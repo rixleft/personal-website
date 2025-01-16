@@ -1,7 +1,5 @@
 <template>
-	<div class="rix-home">
-		<component :is="LayoutComponents[layout]" />
-	</div>
+	<component :is="LayoutComponents[layout]" />
 </template>
 
 <script setup lang="ts">
@@ -19,6 +17,3 @@ const LayoutComponents: Record<Layout.LayoutType, Component> = {
 	unique: Unique
 }
 </script>
-<style scoped lang="scss">
-@use './index.scss';
-</style>

@@ -49,3 +49,33 @@
 	--rix-bg-200: var(--rix-light-bg-200);
 	--rix-bg-300: var(--rix-light-bg-300);
 }
+
+@media (--phone) {
+	#app {
+		width: 100vw;
+		min-height: 100vh;
+		font-size: 12px;
+		color: var(--rix-primary-100);
+		background-color: var(--rix-bg-100);
+	}
+}
+
+@media (--tablet) {
+	#app {
+		width: 100vw;
+		min-height: 100vh;
+		font-size: 12px;
+		color: var(--rix-primary-200);
+		background-color: var(--rix-bg-200);
+	}
+}
+
+@media (--desktop) {
+	#app {
+		width: 100vw;
+		min-height: 100vh;
+		font-size: 10px;
+		color: var(--rix-primary-300);
+		background-color: var(--rix-bg-300);
+	}
+}

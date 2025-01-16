@@ -160,7 +160,6 @@ export default defineComponent({
 			}
 		}
 		provide(CONFIG_PROVIDER_KEY, props)
-
 		return () => <props.tag style={props.themeVarsScope === 'local' ? style.value : undefined}>{slots.default?.()}</props.tag>
 	}
 })

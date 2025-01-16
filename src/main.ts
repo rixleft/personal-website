@@ -1,4 +1,4 @@
-import '@/styles/main.css'
+import '@/styles/main.scss'
 import '@/utils/flexible'
 import { createApp } from 'vue'
 import pinia from '@/stores'

@@ -5,7 +5,7 @@ export const useConfigStore = defineStore(
 	'configStore',
 	() => {
 		const cacheList = ref<string[]>([])
-		const theme = ref<ThemeProvider.ThemeType>('light')
+		const theme = ref<ThemeProvider.ThemeType>('dark')
 		const layout = ref<Layout.LayoutType>('classic')
 		const changeTheme = () => {
 			theme.value = theme.value === 'light' ? 'dark' : 'light'
